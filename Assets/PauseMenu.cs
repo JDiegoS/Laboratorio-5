@@ -11,13 +11,14 @@ public class PauseMenu : MonoBehaviour
     bool f3 = true;
     bool f4 = true;
     public AudioSource collect;
-    private float masterVolume = 0.5f;
+    private float masterVolume = 1;
 
 
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1.0f;
+        //collect = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -31,41 +32,41 @@ public class PauseMenu : MonoBehaviour
             else
                 Pause();
 
-            
+
         }
         if (GameObject.Find("Ficha 1") == null && f1 == true)
         {
-            collect.Play();
+            //collect.Play();
             cont += 1;
             Contador();
             f1 = false;
         }
         if (GameObject.Find("Ficha 2") == null && f2 == true)
         {
-            collect.Play();
+            //collect.Play();
             cont += 1;
             Contador();
             f2 = false;
         }
         if (GameObject.Find("Ficha 3") == null && f3 == true)
         {
-            collect.Play();
+            //collect.Play();
             cont += 1;
             Contador();
             f3 = false;
         }
         if (GameObject.Find("Ficha 4") == null && f4 == true)
         {
-            collect.Play();
+            //collect.Play();
             cont += 1;
             Contador();
             f4 = false;
         }
-        if(cont == 4)
+        if (cont == 4)
         {
             Victory();
         }
-        if(GameObject.Find("Player") == null)
+        if (GameObject.Find("Player") == null)
         {
             Defeat();
         }
@@ -76,7 +77,7 @@ public class PauseMenu : MonoBehaviour
         transform.Find("PauseMenu").gameObject.SetActive(true);
         Time.timeScale = 0.0f;
         isPause = true;
-        
+
     }
     public void Continue()
     {
@@ -92,7 +93,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 0.0f;
         transform.Find("Victory").gameObject.SetActive(true);
-        
+
     }
     public void Defeat()
     {
@@ -102,38 +103,13 @@ public class PauseMenu : MonoBehaviour
     }
     public void Restart()
     {
-        
+
         SceneManager.LoadScene("Maze");
     }
     public void Mainmenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
-    public void SubirVol()
-    {
-        if(masterVolume < 1.0f && masterVolume>= 0.8f)
-        {
-            masterVolume = 1.0f;
-            collect.volume = masterVolume;
-        }else if (masterVolume < 0.8f)
-        {
-            masterVolume = masterVolume + 0.2f;
-            collect.volume = masterVolume;
-        }
-
-    }
-    public void BajarVol()
-    {
-        if (masterVolume < 0.2f && masterVolume >= 0.0f)
-        {
-            masterVolume = 0.0f;
-            collect.volume = masterVolume;
-        }
-        else if (masterVolume > 0.2f)
-        {
-            masterVolume = masterVolume - 0.2f;
-            collect.volume = masterVolume;
-        }
-
-    }
+    
 }
+

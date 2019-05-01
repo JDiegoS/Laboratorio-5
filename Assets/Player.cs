@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sonido = GetComponent<AudioSource>();
+        //sonido = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Plano")
             if (cubo)
             {
-                sonido.Play();
+                //sonido.Play();
                 player = cubo;
                 Destroy(cubo);
                 muerto = true;

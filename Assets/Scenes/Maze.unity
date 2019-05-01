@@ -191,7 +191,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 565618186}
         m_MethodName: Mainmenu
         m_Mode: 1
         m_Arguments:
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 565618186}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -449,7 +449,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 565618186}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -1086,7 +1086,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 534669907}
         m_MethodName: SubirVol
         m_Mode: 1
         m_Arguments:
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 565618186}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -1625,6 +1625,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1708,7 +1709,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 99e7a69d928a745d6ac092cee9ac1e29, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1792,6 +1793,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be264dad170912a488b1d029308b3e86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  son: {fileID: 0}
+  win: {fileID: 8300000, guid: febdc4d5ad5674b32bb3f3686d4687b9, type: 3}
+  collect: {fileID: 8300000, guid: ec35c8d402a9a4be38de6c0ef78bc2f1, type: 3}
+  die: {fileID: 8300000, guid: 5b5416614038649b38575080e929ffd0, type: 3}
+  background: {fileID: 0}
 --- !u!1 &538723805
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,7 +2379,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 534669907}
         m_MethodName: BajarVol
         m_Mode: 1
         m_Arguments:
@@ -2490,7 +2508,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 565618186}
         m_MethodName: Mainmenu
         m_Mode: 1
         m_Arguments:
@@ -2939,7 +2957,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 565618186}
         m_MethodName: Mainmenu
         m_Mode: 1
         m_Arguments:
@@ -3769,7 +3787,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 565618186}
         m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
@@ -4682,6 +4700,7 @@ GameObject:
   - component: {fileID: 1899770945}
   - component: {fileID: 1899770949}
   - component: {fileID: 1899770950}
+  - component: {fileID: 1899770951}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -4874,6 +4893,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &1899770951
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899770944}
+  m_Enabled: 1
 --- !u!1 &2002430284
 GameObject:
   m_ObjectHideFlags: 0
@@ -5177,8 +5204,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Icon
       value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
+      objectReference: {fileID: 0}
     - target: {fileID: 5465449255416698008, guid: 7e54d1068bd7fef45a008634474668a2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5370,3 +5396,11 @@ MonoBehaviour:
   ficha: {fileID: 0}
   son: {fileID: 0}
   sfx: {fileID: 0}
+--- !u!81 &5465449254460025747
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465449254460025739}
+  m_Enabled: 1

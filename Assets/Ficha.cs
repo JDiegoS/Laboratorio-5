@@ -42,7 +42,7 @@ public class Ficha : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            s.Play();
+            //s.Play();
             Destroy(ficha);
         }
     }

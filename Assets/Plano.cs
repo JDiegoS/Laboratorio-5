@@ -11,7 +11,7 @@ public class Plano : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        son = GetComponent<AudioSource>();
+        //son = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class Plano : MonoBehaviour
         if (collision.gameObject.tag == "Plano")
             if (cubo)
             {
-                son.Play();
+                //son.Play();
                 Destroy(cubo);
             }
                 
